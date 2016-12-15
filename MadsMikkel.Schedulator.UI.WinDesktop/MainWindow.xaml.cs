@@ -23,6 +23,9 @@ namespace MadsMikkel.Schedulator.UI.WinDesktop
 		public MainWindow()
 		{
 			InitializeComponent();
+#if DEBUG
+			Title += "    ***  Debugging Mode  ***";
+#endif
 		}
 	}
 }
