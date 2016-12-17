@@ -16,8 +16,14 @@ namespace MadsMikkel.Schedulator.Core
 			this.subSections = subSections as List<SubSection>;
 			if(this.subSections.Count > 0)
 				foreach(SubSection subSection in this.subSections)
-					this.length += subSection.Info.Length;
+					this.length += subSection.Length;
 			else throw new ArgumentOutOfRangeException();
+		}
+
+
+		public override string ToString()
+		{
+			return $"Section length: {length}";
 		}
 
 		public List<SubSection> SubSections

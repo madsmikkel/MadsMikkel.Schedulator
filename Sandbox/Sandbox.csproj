@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE676A1C-5B06-44ED-ABCF-5E9884DD8379}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{6CA5E701-0291-4F82-827F-C4B924FFFC48}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MadsMikkel.Schedulator.Core</RootNamespace>
-    <AssemblyName>MadsMikkel.Schedulator.Core</AssemblyName>
+    <RootNamespace>Sandbox</RootNamespace>
+    <AssemblyName>Sandbox</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,18 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Declination.cs" />
-    <Compile Include="Inclination.cs" />
-    <Compile Include="Line.cs" />
-    <Compile Include="Station.cs" />
-    <Compile Include="Section.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubSection.cs" />
-    <Compile Include="Train.cs" />
-    <Compile Include="TrainSchedule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core.cd" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MadsMikkel.Schedulator.Core\MadsMikkel.Schedulator.Core.csproj">
+      <Project>{ae676a1c-5b06-44ed-abcf-5e9884dd8379}</Project>
+      <Name>MadsMikkel.Schedulator.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MadsMikkel.Schedulator.DataAccess.Tests\MadsMikkel.Schedulator.DataAccess.Tests.csproj">
+      <Project>{8bad71ea-aae6-4314-9952-52f52c6bdf50}</Project>
+      <Name>MadsMikkel.Schedulator.DataAccess.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MadsMikkel.Schedulator.DataAccess\MadsMikkel.Schedulator.DataAccess.csproj">
+      <Project>{6bc7e023-9e0c-40ae-a8a9-c2c8b0cfa1b5}</Project>
+      <Name>MadsMikkel.Schedulator.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MadsMikkel.Schedulator.UI.WinDesktop\MadsMikkel.Schedulator.UI.WinDesktop.csproj">
+      <Project>{4675841d-80de-4d04-9b39-80b5b30cf3bc}</Project>
+      <Name>MadsMikkel.Schedulator.UI.WinDesktop</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

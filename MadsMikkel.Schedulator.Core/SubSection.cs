@@ -1,25 +1,43 @@
-﻿namespace MadsMikkel.Schedulator.Core
+﻿using System;
+
+namespace MadsMikkel.Schedulator.Core
 {
 	public class SubSection
 	{
-		SectionInfo info;
+		decimal startMarker;
+		decimal endMarker;
+		decimal length;
+		float maxIncline;
+		float maxDecline;
 
-		public SubSection(SectionInfo info)
-		{
-			this.Info = info;
-		}
-
-		public SectionInfo Info
+		public decimal Length
 		{
 			get
 			{
-				return info;
+				return length;
 			}
 
 			set
 			{
-				info = value;
+				length = value;
 			}
+		}
+
+		public SubSection(decimal startMarker, decimal endMarker,
+			float maxIncline, float maxDecline)
+		{
+			if(startMarker < 0 || endMarker < 0 || startMarker == endMarker)
+				throw new ArgumentOutOfRangeException();
+			this.startMarker = startMarker;
+			this.endMarker = endMarker;
+			this.Length = Math.Abs(startMarker - endMarker);
+			this.maxIncline = maxIncline;
+			this.maxDecline = maxDecline;
+		}
+
+		public override string ToString()
+		{
+			return $"Subsection from {startMarker} to {endMarker} is {Length} long with max incline at {maxIncline} degrees, and max decline at {maxDecline} degrees";
 		}
 	}
 }

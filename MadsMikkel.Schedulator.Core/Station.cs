@@ -28,8 +28,13 @@ namespace MadsMikkel.Schedulator.Core
 				this.linesToNeighbors.Add(lineToNeighbor, neighbor);
 		}
 
+		public override string ToString()
+		{
+			return $"Station name: {name}, outbound sections: {linesToNeighbors.Count}";
+		}
+
 		public virtual string Name { get; set; }
-		public Dictionary<Section, Station> LinesToNeigbors { get; protected set; }
+		public Dictionary<Section, Station> SectionsToNeigbors { get; protected set; }
 
 	}
 
