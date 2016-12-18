@@ -93,5 +93,23 @@ namespace MadsMikkel.Schedulator.Core
 				s += line[i].ToString() + "\n";
 			return s;
 		}
+
+		public virtual List<Station> GetStations()
+		{
+			List<Station> stations = null;
+			for(int i = 0; i < line.Count && i % 2 == 0; i++)
+				if(line[i] is Station)
+					stations.Add(line[i] as Station);
+			return stations;
+		}
+
+		public virtual Section GetSectionBetween(Station first, Station second)
+		{
+			Section section = null;
+			for(int i = 0; i < line.Count && i % 2 == 0; i++)			
+				if(line[i] == first && line[i + 2] == second)
+					section = line[i + 1]as Section;			
+			return section;
+		}
 	}
 }
