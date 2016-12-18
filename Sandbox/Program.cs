@@ -1,17 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using MadsMikkel.Schedulator.Core;
 
 namespace Sandbox
 {
 	class Program
 	{
+		[DllImport("kernel32.dll")]
+		static extern IntPtr GetConsoleWindow();
+
+		[DllImport("user32.dll")]
+		static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
 		static void Main(string[] args)
 		{
+			ShowWindow(GetConsoleWindow(), 0);
+			Debug.WriteLine("----   SCHEDULATOR DEBUG SESSION   ----");
 			SeeLineOutput();
+			Debug.WriteLine("DEBUG STOPPED");
 		}
 
 		static void SeeLineOutput()
@@ -27,7 +35,7 @@ namespace Sandbox
 			s1.Add(s2, vjFa);
 			s2.Add(s3, FaMd);
 			Line line = new Line(new List<Station>() { s1, s2, s3 });
-			Console.WriteLine(line.ToString());
+			Debug.WriteLine(line.ToString());
 
 		}
 	}
