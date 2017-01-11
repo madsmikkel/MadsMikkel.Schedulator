@@ -9,7 +9,7 @@ namespace MadsMikkel.Schedulator.Core
 		ArrayList line;
 		public Line(List<Station> stations)
 		{
-			line = new ArrayList();
+			line = new ArrayList(stations.Count*2-1);
 			for(int i = 0; i < stations.Count; i++)
 			{
 				line.Insert(i * 2, stations[i]);

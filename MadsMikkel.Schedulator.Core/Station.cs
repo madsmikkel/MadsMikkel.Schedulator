@@ -11,7 +11,7 @@ namespace MadsMikkel.Schedulator.Core
 
 		public Station() : this(String.Empty) { }
 
-		public Station(string name) : this(name, null){}
+		public Station(string name) : this(name, null) { }
 
 		public Station(string name, Dictionary<Section, Station> linesToNeighbors)
 		{
@@ -34,9 +34,11 @@ namespace MadsMikkel.Schedulator.Core
 		}
 
 		public virtual string Name { get; set; }
-		public Dictionary<Section, Station> SectionsToNeigbors { get; protected set; }
+		public Dictionary<Section, Station> SectionsToNeigbors
+		{
+			get { return linesToNeighbors; }
+			protected set { linesToNeighbors = value; }
 
+		}
 	}
-
-
 }

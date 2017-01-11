@@ -37,7 +37,8 @@ namespace MadsMikkel.Schedulator.Core
 
 		public override string ToString()
 		{
-			return $"Subsection from {startMarker} to {endMarker} is {Length} long with max incline at {maxIncline} degrees, and max decline at {maxDecline} degrees";
+			return $"Subsection from {startMarker} to {endMarker} is {Length} long with max"
+				+ "incline at {maxIncline} degrees, and max decline at {maxDecline} degrees";
 		}
 	}
 }

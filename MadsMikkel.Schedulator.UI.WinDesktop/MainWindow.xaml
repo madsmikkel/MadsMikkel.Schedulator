@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MadsMikkel.Schedulator.UI.WinDesktop"
         mc:Ignorable="d"
-        Title="Schedulator  -  Main View" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Closing="MainWindow_Closing"
+        Title="Schedulator"
+        d:DesignHeight="1080"
+        d:DesignWidth="1920"
+        WindowState="Maximized">
+    <DockPanel x:Name="dockPanel">
+        <Menu x:Name="nemu"
+              DockPanel.Dock="Top">
+            <MenuItem Header="Filer">
+                <MenuItem Header="Afslut"
+                          Click="MenuItem_File_Close_Click" />
+            </MenuItem>
+            <MenuItem Header="Hjælp">
+                <MenuItem Header="Om"
+                          Click="MenuItem_Help_About_Click" />
+            </MenuItem>
+        </Menu>
+        <StatusBar x:Name="statusBar"
+                   DockPanel.Dock="Bottom">
+            <TextBlock x:Name="textStatusBar"
+                       Text="Klar til input" />
+        </StatusBar>
+        <Grid x:Name="centerGrid">
+
+        </Grid>
+    </DockPanel>
 </Window>

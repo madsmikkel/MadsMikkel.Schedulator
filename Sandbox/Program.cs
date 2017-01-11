@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Sandbox
 
 		static void SeeLineOutput()
 		{
+			Debug.WriteLine("---- SCHEDULATOR DEBUGGING SESSION ----");
 			SubSection sub1 = new SubSection(0, 10, 10, 5);
 			SubSection sub2 = new SubSection(10.5m, 14.3m, 1, 8);
 			List<SubSection> subSecs = new List<SubSection> { sub1, sub2 };
@@ -27,7 +29,7 @@ namespace Sandbox
 			s1.Add(s2, vjFa);
 			s2.Add(s3, FaMd);
 			Line line = new Line(new List<Station>() { s1, s2, s3 });
-			Console.WriteLine(line.ToString());
+			Debug.WriteLine(line.ToString());
 
 		}
 	}
