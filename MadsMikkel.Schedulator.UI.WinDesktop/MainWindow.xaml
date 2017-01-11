@@ -1,4 +1,5 @@
-﻿<Window x:Class="MadsMikkel.Schedulator.UI.WinDesktop.MainWindow"
+﻿<Window x:Uid="Window_1"
+        x:Class="MadsMikkel.Schedulator.UI.WinDesktop.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,34 +11,45 @@
         d:DesignHeight="1080"
         d:DesignWidth="1920"
         WindowState="Maximized">
-    <DockPanel x:Name="dockPanel">
-        <Menu x:Name="menu"
+    <DockPanel x:Uid="dockPanel"
+               x:Name="dockPanel">
+        <Menu x:Uid="menu"
+              x:Name="menu"
               DockPanel.Dock="Top">
-            <MenuItem x:Name="menuItem_File">
-                <MenuItem x:Name="menuItem_File_Close"
+            <MenuItem x:Uid="menuItem_File"
+                      x:Name="menuItem_File">
+                <MenuItem x:Uid="menuItem_File_Close"
+                          x:Name="menuItem_File_Close"
                           Click="MenuItem_File_Close_Click" />
             </MenuItem>
-            <MenuItem x:Name="menuItem_Tools">
+            <MenuItem x:Uid="menuItem_Tools"
+                      x:Name="menuItem_Tools">
             </MenuItem>
-            <MenuItem x:Name="menuItem_Options">
+            <MenuItem x:Uid="menuItem_Options"
+                      x:Name="menuItem_Options">
             </MenuItem>
-            <MenuItem x:Name="menuItem_Help">
-                <MenuItem x:Name="menuItem_Help_About"
+            <MenuItem x:Uid="menuItem_Help"
+                      x:Name="menuItem_Help">
+                <MenuItem x:Uid="menuItem_Help_About"
+                          x:Name="menuItem_Help_About"
                           Click="MenuItem_Help_About_Click" />
             </MenuItem>
         </Menu>
-        <StatusBar x:Name="statusBar"
+        <StatusBar x:Uid="statusBar"
+                   x:Name="statusBar"
                    Background="RoyalBlue"
                    DockPanel.Dock="Bottom">
-            <TextBlock x:Name="textStatusBar"
+            <TextBlock x:Uid="textStatusBar"
+                       x:Name="textStatusBar"
                        Text="Klar til input"
                        Foreground="White" />
         </StatusBar>
-        <Grid x:Name="centerGrid">
-            <TabControl x:Name="tabs"
-                        Margin="-270,0,270,0">
-                <TabItem x:Name="tabStations">
-
+        <Grid x:Uid="centerGrid"
+              x:Name="centerGrid">
+            <TabControl x:Uid="tabs"
+                        x:Name="tabs">
+                <TabItem x:Uid="tabStations"
+                         x:Name="tabStations">
                 </TabItem>
             </TabControl>
         </Grid>
