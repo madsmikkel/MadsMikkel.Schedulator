@@ -11,24 +11,35 @@
         d:DesignWidth="1920"
         WindowState="Maximized">
     <DockPanel x:Name="dockPanel">
-        <Menu x:Name="nemu"
+        <Menu x:Name="menu"
               DockPanel.Dock="Top">
-            <MenuItem Header="Filer">
-                <MenuItem Header="Afslut"
+            <MenuItem x:Name="menuItem_File">
+                <MenuItem x:Name="menuItem_File_Close"
                           Click="MenuItem_File_Close_Click" />
             </MenuItem>
-            <MenuItem Header="Hjælp">
-                <MenuItem Header="Om"
+            <MenuItem x:Name="menuItem_Tools">
+            </MenuItem>
+            <MenuItem x:Name="menuItem_Options">
+            </MenuItem>
+            <MenuItem x:Name="menuItem_Help">
+                <MenuItem x:Name="menuItem_Help_About"
                           Click="MenuItem_Help_About_Click" />
             </MenuItem>
         </Menu>
         <StatusBar x:Name="statusBar"
+                   Background="RoyalBlue"
                    DockPanel.Dock="Bottom">
             <TextBlock x:Name="textStatusBar"
-                       Text="Klar til input" />
+                       Text="Klar til input"
+                       Foreground="White" />
         </StatusBar>
         <Grid x:Name="centerGrid">
+            <TabControl x:Name="tabs"
+                        Margin="-270,0,270,0">
+                <TabItem x:Name="tabStations">
 
+                </TabItem>
+            </TabControl>
         </Grid>
     </DockPanel>
 </Window>
