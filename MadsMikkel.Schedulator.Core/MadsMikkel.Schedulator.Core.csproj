@@ -40,8 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Declination.cs" />
-    <Compile Include="Inclination.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="Section.cs" />

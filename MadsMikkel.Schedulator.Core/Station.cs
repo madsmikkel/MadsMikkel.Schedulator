@@ -38,7 +38,6 @@ namespace MadsMikkel.Schedulator.Core
 		{
 			get { return linesToNeighbors; }
 			protected set { linesToNeighbors = value; }
-
 		}
 	}
 }
