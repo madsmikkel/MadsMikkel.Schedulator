@@ -26,7 +26,7 @@ namespace MadsMikkel.Schedulator.DataAccess
 		{
 			/* TODO: read more about securering connection strings:
 			 *  https://msdn.microsoft.com/en-us/library/ms254494(v=vs.110).aspx */
-			Connec
+			
 		}
 
 		/// <summary>

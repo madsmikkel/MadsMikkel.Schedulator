@@ -54,10 +54,6 @@
       <Project>{ae676a1c-5b06-44ed-abcf-5e9884dd8379}</Project>
       <Name>MadsMikkel.Schedulator.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MadsMikkel.Schedulator.DataAccess.Tests\MadsMikkel.Schedulator.DataAccess.Tests.csproj">
-      <Project>{8bad71ea-aae6-4314-9952-52f52c6bdf50}</Project>
-      <Name>MadsMikkel.Schedulator.DataAccess.Tests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MadsMikkel.Schedulator.DataAccess\MadsMikkel.Schedulator.DataAccess.csproj">
       <Project>{6bc7e023-9e0c-40ae-a8a9-c2c8b0cfa1b5}</Project>
       <Name>MadsMikkel.Schedulator.DataAccess</Name>
