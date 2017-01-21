@@ -14,10 +14,10 @@ namespace MadsMikkel.Schedulator.DataAccess.Tests
 		[TestMethod]
 		public void ConnectToDb()
 		{
-			QueryExecutor executor = null; 
+			StationHandler executor = null; 
 			try
 			{
-				executor = new QueryExecutor(new SqlConnection(connectionString));
+				executor = new StationHandler(new SqlConnection(connectionString));
 			}
 			catch(Exception e)
 			{
@@ -33,7 +33,7 @@ namespace MadsMikkel.Schedulator.DataAccess.Tests
 			DataTableCollection tables = null;
 			int actual = 0, expected = 1;
 			string query = "SELECT * FROM SubSectionInfos";
-			QueryExecutor executor = new QueryExecutor(new SqlConnection(connectionString));
+			StationHandler executor = new StationHandler(new SqlConnection(connectionString));
 			var x = executor.SelectRows(query);
 			actual = executor.SelectRows(query).Tables.Count;
 			Assert.AreEqual(actual > 0, expected > 0);
@@ -45,7 +45,7 @@ namespace MadsMikkel.Schedulator.DataAccess.Tests
 			DataSet set = null;
 			DataTableCollection tables = null;
 			string query = "SELECT * FROM SubSectionInfos";
-			QueryExecutor executor = new QueryExecutor(new SqlConnection(connectionString));
+			StationHandler executor = new StationHandler(new SqlConnection(connectionString));
 			var x = executor.SelectRows(query);
 		}
 	}

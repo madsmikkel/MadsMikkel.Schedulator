@@ -17,22 +17,28 @@
               x:Name="menu"
               DockPanel.Dock="Top">
             <MenuItem x:Uid="menuItem_File"
-                      x:Name="menuItem_File">
+                      x:Name="menuItem_File"
+                      Header="File">
                 <MenuItem x:Uid="menuItem_File_Close"
                           x:Name="menuItem_File_Close"
-                          Click="MenuItem_File_Close_Click" />
+                          Click="MenuItem_File_Close_Click"
+                          Header="Close"/>
             </MenuItem>
             <MenuItem x:Uid="menuItem_Tools"
-                      x:Name="menuItem_Tools">
+                      x:Name="menuItem_Tools"
+                      Header="Tools">
             </MenuItem>
             <MenuItem x:Uid="menuItem_Options"
-                      x:Name="menuItem_Options">
+                      x:Name="menuItem_Options"
+                      Header="Options">
             </MenuItem>
             <MenuItem x:Uid="menuItem_Help"
-                      x:Name="menuItem_Help">
+                      x:Name="menuItem_Help"
+                      Header="Help">
                 <MenuItem x:Uid="menuItem_Help_About"
                           x:Name="menuItem_Help_About"
-                          Click="MenuItem_Help_About_Click" />
+                          Click="MenuItem_Help_About_Click"
+                          Header="About"/>
             </MenuItem>
         </Menu>
         <StatusBar x:Uid="statusBar"
@@ -41,7 +47,7 @@
                    DockPanel.Dock="Bottom">
             <TextBlock x:Uid="textStatusBar"
                        x:Name="textStatusBar"
-                       Text="Klar til input"
+                       Text="Ready for input"
                        Foreground="White" />
         </StatusBar>
         <Grid x:Uid="centerGrid"
@@ -49,7 +55,12 @@
             <TabControl x:Uid="tabs"
                         x:Name="tabs">
                 <TabItem x:Uid="tabStations"
-                         x:Name="tabStations">
+                         x:Name="tabStations"
+                         Header="Stations">
+                </TabItem>
+                <TabItem x:Uid="tabLines"
+                         x:Name="tabLines"
+                         Header="Lines">
                 </TabItem>
             </TabControl>
         </Grid>

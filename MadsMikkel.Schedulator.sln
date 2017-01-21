@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadsMikkel.Schedulator.Controllers", "MadsMikkel.Schedulator.Controllers\MadsMikkel.Schedulator.Controllers.csproj", "{71A70FA7-5206-44C4-A95C-496D77870A07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadsMikkel.Schedulator.UI.Localization", "MadsMikkel.Schedulator.UI.Localization\MadsMikkel.Schedulator.UI.Localization.csproj", "{5FAC0D29-4DA5-4BC1-B696-EBA00AFE7AA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadsMikkel.Schedulator.Clients.Win10", "MadsMikkel.Schedulator.Clients.Win10\MadsMikkel.Schedulator.Clients.Win10.csproj", "{CE6B4C30-5BB1-4359-B875-309971B226C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,14 @@ Global
 		{71A70FA7-5206-44C4-A95C-496D77870A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A70FA7-5206-44C4-A95C-496D77870A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A70FA7-5206-44C4-A95C-496D77870A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAC0D29-4DA5-4BC1-B696-EBA00AFE7AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAC0D29-4DA5-4BC1-B696-EBA00AFE7AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAC0D29-4DA5-4BC1-B696-EBA00AFE7AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAC0D29-4DA5-4BC1-B696-EBA00AFE7AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE6B4C30-5BB1-4359-B875-309971B226C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE6B4C30-5BB1-4359-B875-309971B226C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE6B4C30-5BB1-4359-B875-309971B226C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE6B4C30-5BB1-4359-B875-309971B226C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
