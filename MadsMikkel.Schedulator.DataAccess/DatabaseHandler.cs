@@ -15,8 +15,17 @@ namespace MadsMikkel.Schedulator.DataAccess
 	/// </summary>
 	public abstract class DatabaseFacade
 	{
+		#region Fields
+		protected QueryExecutor executor;
+		#endregion
 
-		#region Constructor
+
+		#region Constructors
+		static DatabaseFacade()
+		{
+
+		}
+
 		/// <summary>
 		/// Initializes a new instance of this class.
 		/// </summary>
@@ -117,8 +126,7 @@ namespace MadsMikkel.Schedulator.DataAccess
 				{
 					try
 					{
-						SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-						builder.
+						
 					}
 					catch(Exception)
 					{
