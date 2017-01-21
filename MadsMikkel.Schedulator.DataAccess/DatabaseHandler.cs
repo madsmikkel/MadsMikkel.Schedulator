@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -23,7 +24,9 @@ namespace MadsMikkel.Schedulator.DataAccess
 		#region Constructors
 		static DatabaseFacade()
 		{
-
+			/* TODO: read more about securering connection strings:
+			 *  https://msdn.microsoft.com/en-us/library/ms254494(v=vs.110).aspx */
+			Connec
 		}
 
 		/// <summary>
